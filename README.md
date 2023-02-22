@@ -1,7 +1,6 @@
 # Widget template
 
-This template used by widget-server to compile client-own scripts. FU##CKING ESBUILD ERROR => npm
-cache --force clean && pnpm install --force
+This template used by widget-server to compile client-own scripts.
 
 ## Recommended IDE Setup
 
