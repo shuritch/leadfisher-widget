@@ -1,0 +1,77 @@
+{
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.js",
+    "src/**/*.svelte",
+    "tests/shared/utils/isJSON.test.js",
+    "tests/shared/utils/string.test.js"
+  ],
+  "compilerOptions": {
+    "lib": ["esnext", "dom"],
+    "types": ["node", "svelte"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "checkJs": true,
+    "outDir": "./build",
+    "baseUrl": ".",
+
+    // lint
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+
+    // Strict rules
+    "strictNullChecks": false,
+    "strict": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "alwaysStrict": true,
+    "strictPropertyInitialization": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "suppressExcessPropertyErrors": false,
+    "suppressImplicitAnyIndexErrors": false,
+    "noStrictGenericChecks": false,
+
+    // adds
+    "useDefineForClassFields": true,
+    "allowJs": true,
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "incremental": true,
+    "importsNotUsedAsValues": "error",
+    "forceConsistentCasingInFileNames": true,
+
+    "paths": {
+      "$": ["src"],
+      "$app/*": ["src/app/*"],
+      "$process/*": ["src/process/*"],
+      "$widgets/*": ["src/widgets/*"],
+      "$features/*": ["src/features/*"],
+      "$entities/*": ["src/entities/*"],
+      "$shared/*": ["src/shared/*"],
+      "$types/*": ["src/shared/types/*"],
+      "$store/*": ["src/shared/store/*"],
+      "$errors/*": ["src/shared/errors/*"],
+      "$errors": ["src/shared/errors"],
+      "$lib/*": ["src/shared/lib/*"],
+      "$styles/*": ["src/app/styles/*"],
+      "$proxy/*": ["src/shared/proxy/*"],
+      "$decorators/*": ["src/shared/decorators/*"]
+    }
+  }
+}

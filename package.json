@@ -1,0 +1,56 @@
+{
+  "name": "widget",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@7.26.0",
+  "scripts": {
+    "dev": "vite",
+    "prepare": "husky install",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "prettier": "prettier --write --check src/**/*.{js,svelte,ts,json,yaml,html,md}",
+    "stylelint": "npx stylelint src/**/*.{css,scss,sass,svelte}",
+    "stylelint:fix": "npx stylelint src/**/*.{css,scss,sass,svelte} --fix",
+    "eslint": "eslint src/**/*.{js,svelte,ts,json,yaml,html,md}",
+    "eslint:fix": "eslint src/**/*.{js,svelte,ts,json,yaml,html,md} --fix",
+    "test": "vitest"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "pnpm run prettier && pnpm run stylelint && pnpm run eslint && pnpm run check"
+    }
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.0.2",
+    "eslint": "^8.33.0",
+    "eslint-config-leadfisher": "^1.1.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "husky": "^8.0.3",
+    "jsdom": "^21.1.0",
+    "postcss": "^8.4.21",
+    "postcss-html": "^1.5.0",
+    "postcss-safe-parser": "^6.0.0",
+    "postcss-sass": "^0.5.0",
+    "postcss-scss": "^4.0.6",
+    "prettier": "^2.8.4",
+    "prettier-plugin-svelte": "^2.9.0",
+    "sass": "^1.58.0",
+    "stylelint": "^15.0.0",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended-scss": "^8.0.0",
+    "stylelint-config-standard": "^30.0.1",
+    "stylelint-order": "^6.0.1",
+    "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.3.0",
+    "svelte": "^3.55.1",
+    "vite": "^4.1.1",
+    "vite-jsconfig-paths": "^2.0.1",
+    "vitest": "^0.28.4"
+  }
+}
