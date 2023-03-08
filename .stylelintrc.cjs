@@ -13,7 +13,6 @@ module.exports = {
       files: ['*.svelte', '**/*.svelte'],
       customSyntax: require('postcss-html')({
         css: 'postcss-safe-parser',
-        sass: require('postcss-sass'),
         scss: 'postcss-scss',
       }),
     },

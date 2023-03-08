@@ -1,11 +1,6 @@
 {
-  "include": [
-    "src/**/*.d.ts",
-    "src/**/*.js",
-    "src/**/*.svelte",
-    "tests/shared/utils/isJSON.test.js",
-    "tests/shared/utils/string.test.js"
-  ],
+  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte", "tests/**/*.js"],
+  "exclude": ["node_modules/*", "build/*", "public/*"],
   "compilerOptions": {
     "lib": ["esnext", "dom"],
     "types": ["node", "svelte"],
@@ -21,7 +16,7 @@
     "outDir": "./build",
     "baseUrl": ".",
 
-    // lint
+    // ? Linter
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitReturns": true,
@@ -31,7 +26,7 @@
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
 
-    // Strict rules
+    // ? Strict rules
     "strictNullChecks": false,
     "strict": true,
     "noImplicitAny": false,
@@ -44,7 +39,7 @@
     "suppressImplicitAnyIndexErrors": false,
     "noStrictGenericChecks": false,
 
-    // adds
+    // ? Adds
     "useDefineForClassFields": true,
     "allowJs": true,
     "declaration": true,
@@ -57,21 +52,21 @@
     "forceConsistentCasingInFileNames": true,
 
     "paths": {
-      "$": ["src"],
-      "$app/*": ["src/app/*"],
-      "$process/*": ["src/process/*"],
-      "$widgets/*": ["src/widgets/*"],
-      "$features/*": ["src/features/*"],
-      "$entities/*": ["src/entities/*"],
-      "$shared/*": ["src/shared/*"],
-      "$types/*": ["src/shared/types/*"],
-      "$store/*": ["src/shared/store/*"],
-      "$errors/*": ["src/shared/errors/*"],
-      "$errors": ["src/shared/errors"],
-      "$lib/*": ["src/shared/lib/*"],
-      "$styles/*": ["src/app/styles/*"],
-      "$proxy/*": ["src/shared/proxy/*"],
-      "$decorators/*": ["src/shared/decorators/*"]
+      "$": ["./src"],
+      "$app/*": ["./src/app/*"],
+      "$process/*": ["./src/process/*"],
+      "$widgets/*": ["./src/widgets/*"],
+      "$features/*": ["./src/features/*"],
+      "$entities/*": ["./src/entities/*"],
+      "$shared/*": ["./src/shared/*"],
+      "$types/*": ["./src/shared/types/*"],
+      "$store/*": ["./src/shared/store/*"],
+      "$errors/*": ["./src/shared/errors/*"],
+      "$errors": ["./src/shared/errors"],
+      "$lib/*": ["./src/shared/lib/*"],
+      "$styles/*": ["./src/app/styles/*"],
+      "$proxy/*": ["./src/shared/proxy/*"],
+      "$decorators/*": ["./src/shared/decorators/*"]
     }
   }
 }

@@ -8,5 +8,6 @@ const target = $()
   .appendTo(document.body)
   .get();
 
+// @ts-ignore
 const app = new App({ target, intro: true });
 export default app;

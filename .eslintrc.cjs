@@ -13,7 +13,7 @@ module.exports = {
   },
   extends: ['eslint:recommended', 'leadfisher', 'plugin:prettier/recommended'],
   plugins: ['svelte3'],
-  ignorePatterns: ['node_modules', '*.cjs', 'public', 'src/**/*.{sass, scss}'],
+  ignorePatterns: ['node_modules', '*.cjs', 'public', 'src/**/*.{sass, scss, d.ts}'],
   overrides: [
     {
       files: ['**/*.svelte'],
